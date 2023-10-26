@@ -6,7 +6,8 @@ print('\n\n')
 
 
 # URL de prueba
-url = 'https://www.repsol.com/es/conocenos/que-hacemos/index.cshtml'
+url = 'https://www.repsol.com/es/sostenibilidad/index.cshtml'
+filename = 'Sostenibilidad.txt'
 
 
 page = urlopen(url)
@@ -41,17 +42,14 @@ for x in lista_de_textos:
         textaco += ' '.join(l) + '\n'
 
 print('"""')
-print(textaco)
+#print(textaco)
 print('"""')
 
+import sys
 
-f = open('Info.txt', 'w')
-f.write(textaco)
+
+f = open(filename, 'wb')
+f.write(textaco.encode(sys.stdout.encoding, errors='replace'))
 f.close()
 
 print('\n\n')
-
-
-import re
-
-print(re.match('.*Te ofrecemos.*', textaco))
