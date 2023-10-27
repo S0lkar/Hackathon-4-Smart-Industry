@@ -28,7 +28,7 @@ background-attachment: local;
 
 [data-testid="stSidebar"] > div:first-child {{
 background: rgb(168,23,40);
-background: linear-gradient(0deg, rgba(168,23,40,0.8) 0%, rgba(214,29,49,0.8) 8%, rgba(238,128,10,0.8) 82%, rgba(250,189,60,0.8) 100%);
+background: linear-gradient(0deg, rgba(168,23,40,0.8) 0%, rgba(214,29,49,0.8) 8%, rgba(250,250,250,0.8) 44%, rgba(238,128,10,0.8) 82%, rgba(250,189,60,0.8) 100%);
 }}
 
 [data-testid="stHeader"] {{
@@ -56,7 +56,7 @@ def get_random_string(length):
     return result_str
     
 with st.sidebar:
-    prompt = st.text_input("¿Quieres saber algo más sobre la transición energética?")
+    prompt = st.text_input("¿ción energética?")
     prompt = get_random_string(4)
     st.write('Repbot dice: \n\t', prompt)
     
