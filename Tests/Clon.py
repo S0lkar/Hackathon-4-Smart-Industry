@@ -1,17 +1,17 @@
 import base64
 import streamlit as st
 import plotly.express as px
+import streamlit.components.v1 as components
 # https://codepen.io/lewismcarey/pen/GJZVoG
 df = px.data.iris()
 fondo = "background.png"
 
 
-@st.cache_data #@st.experimental_memo
+@st.cache_data
 def get_img_as_base64(file):
     with open(file, "rb") as f:
         data = f.read()
     return base64.b64encode(data).decode()
-
 
 img = get_img_as_base64(fondo)
 
@@ -39,6 +39,20 @@ right: 2rem;
 }}
 </style>
 """
+
+components.html("""
+<div class="ticker-wrap">
+<div class="ticker">
+  <div class="ticker__item">¡Repsol es chupiguay!</div>
+  <div class="ticker__item">¡La descarbonizacion mola!</div>
+  <div class="ticker__item">Buenos días</div>
+</div>
+</div>
+""")
+
+with open('rotatorio.css') as f:
+    st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
+
 
 st.markdown(page_bg_img, unsafe_allow_html=True)
 st.title("")
