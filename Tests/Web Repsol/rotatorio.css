@@ -1,5 +1,17 @@
+# ---- HTML ----
+components.html("""
+<div class="ticker-wrap">
+<div class="ticker">
+  <div class="ticker__item">¡Repsol es chupiguay!</div>
+  <div class="ticker__item">¡La descarbonizacion mola!</div>
+  <div class="ticker__item">Buenos días</div>
+</div>
+</div>
+""")
+#with open('rotatorio.css') as f:
+#    st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
-
+# ---- CSS ----
 
 * {
     box-sizing: border-box;
@@ -62,13 +74,8 @@
   
   body {
     padding-bottom: 5rem;
-    background-image: url("data:image/png;base64,{img}");
-background-size: 100%;
-background-position: top left;
-background-repeat: no-repeat;
-background-attachment: local;
   }
   
   h1, h2, p {
-    padding: 0 500%;
+    padding: 0 5%;
   }
