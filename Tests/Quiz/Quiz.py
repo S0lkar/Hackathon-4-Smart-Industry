@@ -1,12 +1,21 @@
+######################################################
+# ------------ Dependencias del código ---------------
+######################################################
+
 import base64
 import streamlit as st
 import plotly.express as px
-from Nucleo import Chatbot
+from Nucleo import Quizbot
 from PIL import Image
+
+######################################################
+# ------ Código relacionado a la presentación --------
+######################################################
 
 df = px.data.iris()
 Racha = 0
 Map = 1
+contenido = Quizbot()
 
 @st.cache_data
 def get_img_as_base64(file):
@@ -34,13 +43,18 @@ right: 2rem;
 }}
 </style>
 """
-
+    
 st.markdown(page, unsafe_allow_html=True)
 st.title("#Nombre")
 st.header("Mira tu que slogan mas apañao")
 placeholder = st.empty()
 with placeholder.container():
     st.image(Image.open('0.png'))
+
+
+######################################################
+# ------ Código relacionado a la interacción ---------
+######################################################
 
 def Correcto():
     global Racha
@@ -60,24 +74,29 @@ def Incorrecto():
         st.image(Image.open(str(Racha) + '.png'), caption='Ups...')
 
 
-
-
-if st.button("A", type="primary"):
+def Actualizar_pregunta():
+    global contenido
+    contenido = Quizbot()
+    st.text('PREGUNTA: ' + contenido[0])
+    
+if st.button(contenido[1], key=1):
     if Map == 1:
-        Correcto()
-    else:
-        Incorrecto()
-
-if st.button("B", type="primary"):
-    if Map == 2:
-        Correcto()
-    else:
-        Incorrecto()
-        
-if st.button("C", type="primary"):
-    if Map == 3:
         Correcto()
     else:
         Incorrecto()
     
 
+if st.button(contenido[2], key=2):
+    if Map == 2:
+        Correcto()
+    else:
+        Incorrecto()
+        
+if st.button(contenido[3], key=3):
+    if Map == 3:
+        Correcto()
+    else:
+        Incorrecto()
+        
+if st.button('¡Siguiente!', key=4):
+    Actualizar_pregunta()
