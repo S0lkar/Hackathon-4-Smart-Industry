@@ -47,8 +47,8 @@ right: 2rem;
 """
     
 st.markdown(page, unsafe_allow_html=True)
-st.title("#Nombre")
-st.header("Mira tu que slogan mas apañao")
+st.title("#GanaConRepsolín")
+st.header("¿Ganarás la mejor medalla?")
 ######################################################
 # ------ Código relacionado a la interacción ---------
 ######################################################

@@ -73,12 +73,12 @@ def Quizbot():
     
     seguridad = 0
     respuesta_f2 = respuesta_f1
-    '''
+    
     while respuesta_f2 == respuesta_f1 and seguridad < 4:
         contexto_f = contexto = "Eres una IA encargada de responder una pregunta fácil sobre transición energética en Repsol. No puedes responder " + respuesta_f1 + '. Sabes que ' + contexto_quiz + ".\n Debes responder incorrectamente y con menos de 9 palabras. La pregunta es: " + pregunta
         respuesta_f2 = get_completion(contexto_f)
         seguridad += 1
-    '''
-    opc = [respuesta_v, respuesta_f1, respuesta_f2]
+    
+    opc = random.shuffle([respuesta_v, respuesta_f1, respuesta_f2])
     return {'question': pregunta, 'options': opc, 'answer': respuesta_v}
     
