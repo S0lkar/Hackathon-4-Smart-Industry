@@ -11,6 +11,7 @@
 import openai
 import os
 import json
+import random
 
 def get_completion(prompt, model="gpt-3.5-turbo"):
     '''
@@ -79,6 +80,7 @@ def Quizbot():
         respuesta_f2 = get_completion(contexto_f)
         seguridad += 1
     
-    opc = random.shuffle([respuesta_v, respuesta_f1, respuesta_f2])
+    opc = [respuesta_v, respuesta_f1, respuesta_f2]
+    random.shuffle(opc)
     return {'question': pregunta, 'options': opc, 'answer': respuesta_v}
     
