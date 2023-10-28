@@ -51,7 +51,7 @@ st.sidebar.header("")
 
     
 with st.sidebar:
-    prompt = st.text_input("¿Quieres saber algo más sobre la transición energética?")
+    prompt = st.text_input("Infórmate de la transición energética y consigue las medallas")
     prompt = Chatbot(prompt)
-    st.write('Repbot dice: ', prompt)
+    st.write('Repsolín responde: \n', prompt)
     
