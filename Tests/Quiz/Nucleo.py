@@ -79,5 +79,6 @@ def Quizbot():
         respuesta_f2 = get_completion(contexto_f)
         seguridad += 1
     '''
-    return [pregunta, respuesta_v, respuesta_f1, respuesta_f2]
+    opc = [respuesta_v, respuesta_f1, respuesta_f2]
+    return {'question': pregunta, 'options': opc, 'answer': respuesta_v}
     
