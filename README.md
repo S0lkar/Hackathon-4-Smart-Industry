@@ -1,11 +1,11 @@
 # Hackathon-4-Smart-Industry
-De aventuras por la hackathon VII
+Código desarrollado durante el hackathon VII (Repsol - Digitalización).
 
 -- Tests --
-Info + Códigos de prueba antes de la competición
+Información básica y códigos de prueba antes de la competición.
 
 -- Presentación -- 
-Cosas que usemos (diapositivas, gráficas...) para presentar el proyecto
+Soportes usados (diapositivas, gráficas...) para presentar el proyecto.
 
 -- Oficial --
-El software final que hagamos para la competición
+El software final entregado para la competición.
