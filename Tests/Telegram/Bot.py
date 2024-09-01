@@ -13,7 +13,7 @@ import Nucleo
 ###################################
 
 # Introducimos el token correspondiente.
-bot = telebot.TeleBot('6934807191:AAG3JYwFm9yASTBBzKKIwJ4V9f3QvB1FizY')
+bot = telebot.TeleBot('Your API key')
 
 # Es posible crear diferentes comandos y personalizarlos
 @bot.message_handler(commands=['start', 'hola'])
